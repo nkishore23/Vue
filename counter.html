@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+        <h1>{{count}}</h1>
+
+        <button @click="increment">Increment</button>
+        <button @click="decrement">Decrement</button>
+        <button @click="minValue">Min Value</button>
+        <button @click="maxValue">Max Value</button>
+        <button @click="reset">Reset</button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                count: 0
+            },
+            methods: {
+                increment() {
+                    this.count++
+                },
+                decrement() {
+                    this.count--
+                },
+                reset() {
+                    this.count = 0
+                },
+
+                maxValue() {
+                    this.count = 10
+                },
+                minValue() {
+                    this.count = -10
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>
