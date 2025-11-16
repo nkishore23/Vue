@@ -22,9 +22,11 @@
             <li v-for="item in items">{{item}}</li>
         </ul>
 
-        <ul>
+        <ul v-if="fruits.length < 0">
             <li v-for="(fruit,index) in fruits">{{index}} - {{fruit}}</li>
         </ul>
+
+        <p v-else>No items found</p>
 
         <ul>
             <li>{{person.name}} - {{person.age}}</li>
