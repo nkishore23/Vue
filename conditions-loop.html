@@ -22,6 +22,15 @@
             <li v-for="item in items">{{item}}</li>
         </ul>
 
+        <ul>
+            <li v-for="(fruit,index) in fruits">{{index}} - {{fruit}}</li>
+        </ul>
+
+        <ul>
+            <li>{{person.name}} - {{person.age}}</li>
+            <li v-for="mark in person.marks">{{mark.subject}} : {{mark.score}}</li>
+        </ul>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
@@ -31,7 +40,26 @@
             el: "#app",
             data: {
                 isVisible: true,
-                items: [1, 2, 3, 4, 5]
+                items: [1, 2, 3, 4, 5],
+                fruits: ["Apple", "Banana", "Orange", "Pineapple"],
+                person: {
+                    name: "Kishore",
+                    age: 32,
+                    marks: [
+                        {
+                            subject: "Tamil",
+                            score: 95
+                        },
+                        {
+                            subject: "English",
+                            score: 88
+                        },
+                        {
+                            subject: "Maths",
+                            score: 92
+                        }
+                    ]
+                }
             },
             methods: {
                 toggleText() {
